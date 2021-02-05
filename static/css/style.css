@@ -1,4 +1,6 @@
 body {
+  background: #0F0F1F;
+  color: #ddd;
   max-width: 800px;
   margin: auto;
   padding: .2em;
@@ -24,8 +26,8 @@ output:
 .menu li { display: inline-block; }
 .article-meta, .menu a {
   text-decoration: none;
-  background: #E8DBC5;
-  color: #000;
+  background: #3F4F6F;
+  color: #ddd;
   padding: 5px;
   border-radius: 5px;
   border-style: dotted;
@@ -46,7 +48,7 @@ footer a { text-decoration: none; }
 }
 
 a {
-  color: #613DC1;
+  color: #9595AF;
   text-decoration: none;
 }
 
@@ -56,38 +58,38 @@ a:hover {
 
 /* Adjust background at your leisure! */
 header {
-    position: relative;
-    width: 100%;
-    height: 1.75rem;
-    font-size: 1rem;
-    background: #613DC1;
-    border-bottom: 1px solid #000;
+  position: relative;
+  width: 100%;
+  height: 1.75rem;
+  font-size: 1rem;
+  background: #613DA1;
+  border-bottom: 1px solid #000;
 }
 
 header ul,
 header ol {
-    margin: 0;
-    padding: 0;
-    list-style: none
+  margin: 0;
+  padding: 0;
+  list-style: none
 }
 header nav {
     padding: 0 0.5rem
 }
 
 header a {
-    color: #fff;
-    line-height: 1.75rem;
-    padding: 0 0.5rem
+  color: #fff;
+  line-height: 1.75rem;
+  padding: 0 0.5rem
 }
-header a:hover,
 header .current a {
-    color: #fff
+    text-decoration: underline;
+    color: #DBD0E6
 }
 
 /* Code Boxes */
 pre {
   border: 1px solid #ddd;
-  box-shadow: 5px 5px 5px #eee;
+  box-shadow: 5px 5px 5px #333;
   background: #f8f8f8;
   padding: 1em;
   overflow-x: auto;
@@ -114,7 +116,7 @@ main a {
   font-weight: bold;
 }
 blockquote {
-  background: #f9f9f9;
+  background: #555;
   border-left: 5px solid #ccc;
   padding: 3px 1em 3px;
 }
