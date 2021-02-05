@@ -1,7 +1,7 @@
 {{ partial "header.html" . }}
 
 <div class="content-wrapper">
-{{if not .IsHome }}
+  {{if not .IsHome }}
   <h1>{{ .Title | markdownify }}</h1>
   {{ end }}
 
@@ -16,6 +16,6 @@
        <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
      </li>
      {{ end }}
-   </ul>
+  </ul>
 </div>
 {{ partial "footer.html" . }}
