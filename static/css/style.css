@@ -83,25 +83,41 @@ header a {
   padding: 0 0.5rem;
 }
 header .current a {
-  text-decoration: none;
-  font-weight: bold;
   color: #0F0F1F;
+  font-weight: bold;
 }
 header a:hover {
+  color: #3F3F4F;
   text-decoration: none;
-  color: #44617B;
+}
+
+.current-header {
+  color: #0F0F1F;
+  font-weight: bold;
+  line-height: 1.75rem;
+  padding: 0 0.5rem;
 }
 
 /* Code Boxes */
 pre {
-  border: 1px solid #ddd;
-  box-shadow: 5px 5px 5px #333;
+  border: 1px solid #D0AF4C;
   background: #f8f8f8;
-  padding: 1em;
+  white-space: pre;
+  text-overflow: clip;
   overflow-x: auto;
 }
-code { background: #f9f9f9; }
-pre code { background: none; }
+code {
+  background: #3F4F6F;
+  font-size: 1.2em;
+  font-weight: 500;
+  padding: 0 0.5rem;
+}
+.code-line:nth-child(even){
+  background-color: #0F0F1F;
+}
+pre.code:before {
+  content: attr(data-lang);
+}
 
 /* Images, tables, misc. */
 img, iframe, video {
