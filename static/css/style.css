@@ -87,7 +87,7 @@ header .current a {
   font-weight: bold;
 }
 header a:hover {
-  color: #3F3F4F;
+  color: #3F4F6F;
   text-decoration: none;
 }
 
@@ -101,22 +101,15 @@ header a:hover {
 /* Code Boxes */
 pre {
   border: 1px solid #D0AF4C;
-  background: #f8f8f8;
+  overflow-x: auto;
   white-space: pre;
   text-overflow: clip;
-  overflow-x: auto;
 }
-code {
-  background: #3F4F6F;
-  font-size: 1.2em;
+:not(pre) > code {
+  background: #282C34;
+  border-bottom: 2px solid #D0AF4C;
   font-weight: 500;
-  padding: 0 0.5rem;
-}
-.code-line:nth-child(even){
-  background-color: #0F0F1F;
-}
-pre.code:before {
-  content: attr(data-lang);
+  padding: 0 0.4rem;
 }
 
 /* Images, tables, misc. */
@@ -138,9 +131,9 @@ main a {
   font-weight: bold;
 }
 blockquote {
-  background: #555;
-  border-left: 5px solid #ccc;
-  padding: 3px 1em 3px;
+  background: #282C34;
+  border-left: 2px solid #D0AF4C;
+  padding: 3px 2em 3px;
 }
 
 table {
