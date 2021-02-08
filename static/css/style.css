@@ -100,11 +100,42 @@ header a:hover {
 
 /* Code Boxes */
 pre {
+  background: #282C34;
   border: 1px solid #D0AF4C;
   overflow-x: auto;
   white-space: pre;
   text-overflow: clip;
 }
+code {
+  max-height: 500px;
+  overflow: scroll;
+  white-space: pre !important;
+  text-overflow: clip !important;
+}
+.code-line:nth-child(even) {
+  background-color: #383C44;
+}
+.code-line {
+  counter-increment: linenumber;
+}
+.code-line::before {
+  content: counter(linenumber);
+  display: inline-block;
+  color: #ccc;
+  text-align: right;
+}
+pre.code:before {
+  content: attr(data-lang);
+  display: inline-block;
+  background: white;
+  color: #666;
+  padding: 3px;
+  position: absolute;
+  margin-left: -10px;
+  margin-top: -30px;
+}
+
+/* Single Code Lines */
 :not(pre) > code {
   background: #282C34;
   border-bottom: 2px solid #D0AF4C;

@@ -28,7 +28,6 @@ pre, code {
   font-family:
     'Consolas',
     'Ricty Diminished',
-    'Hackgen',
     -apple-system,
     BlinkMacSystemFont,
     'Segoe UI',
@@ -39,4 +38,15 @@ pre, code {
     'Segoe UI Emoji',
     'Segoe UI Symbol';
   font-size: 1.05rem
+}
+pre.code[data-lang-label]::before {
+  font-family:
+    'Helvetica Neue',
+    'Helvetica',
+    'Arial',
+    'Hiragino Kaku Gothic Pro',
+    'Meiryo',
+    'MS PGothic',
+    sans-serif;
+  font-style: italic;
 }
