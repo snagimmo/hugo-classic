@@ -102,40 +102,58 @@ header a:hover {
 pre {
   background: #282C34;
   border: 1px solid #D0AF4C;
+  border-radius: 4px 4px 4px 4px;
   overflow-x: auto;
   white-space: pre;
   text-overflow: clip;
+  line-height: 1.5em;
 }
-code {
+pre.code {
   max-height: 500px;
   overflow: scroll;
   white-space: pre !important;
   text-overflow: clip !important;
-}
-.code-line:nth-child(even) {
-  background-color: #383C44;
-}
-.code-line {
-  counter-increment: linenumber;
-}
-.code-line::before {
-  content: counter(linenumber);
-  display: inline-block;
-  color: #ccc;
-  text-align: right;
-}
-pre.code:before {
-  content: attr(data-lang);
-  display: inline-block;
-  background: white;
-  color: #666;
-  padding: 3px;
-  position: absolute;
-  margin-left: -10px;
-  margin-top: -30px;
+  padding-left: 5px;
 }
 
-/* Single Code Lines */
+/* Show line number */
+.code-line {
+  counter-increment: linenumber;
+  background: #282C34;
+}
+/* .code-line:nth-child(even) { */
+/*   background: #282C34; */
+/* } */
+.code-line:before {
+  content: counter(linenumber);
+  display: inline-block;
+  border-right: 1px solid #D0AF4C;
+  background: #282C34;
+  color: #ccc;
+  font-size: 0.9em;
+  width: 0.9em;
+  text-align: right;
+  padding-right: 0.15em;
+}
+
+/* Show filename */
+pre.chroma code {
+  background: #282C34;
+  margin-top: -28px;
+  padding-top: 40px;
+  padding-bottom: 12px;
+}
+.code-name {
+  display: inline-block;
+  background: #D0AF4C;
+  outline-color: #282C34;
+  color: #0F0F1F;
+  border-radius: 0 0 4px 0;
+  padding: 0px 8px;
+  position: relative;
+}
+
+/* Single code lines */
 :not(pre) > code {
   background: #282C34;
   border-bottom: 2px solid #D0AF4C;
@@ -164,6 +182,7 @@ main a {
 blockquote {
   background: #282C34;
   border-left: 2px solid #D0AF4C;
+  border-radius: 6px 6px 6px 6px;
   padding: 3px 2em 3px;
 }
 

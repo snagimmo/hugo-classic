@@ -1,7 +1,7 @@
-var codeBlock = document.body.getElementsByClassName('chroma');
+var codeBlock = document.body.getElementsByClassName('highlight');
 
 for(i=0; i <= codeBlock.length-1; i++){
-  var code = codeBlock[i].firstElementChild;
+  var code = codeBlock[i].firstElementChild.firstElementChild;
   if (!/lang/.test(code.className)) {
       break;
   }
