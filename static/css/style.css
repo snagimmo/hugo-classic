@@ -184,6 +184,7 @@ blockquote {
   border-left: 2px solid #D0AF4C;
   border-radius: 6px 6px 6px 6px;
   padding: 3px 2em 3px;
+  line-height: 1.5em;
 }
 
 table {
