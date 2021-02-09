@@ -41,17 +41,16 @@ output:
 footer a { text-decoration: none; }
 
 .pull-left {
-    float: left
+  float: left
 }
 .pull-right {
-    float: right
+  float: right
 }
 
 a {
   color: #9595AF;
   text-decoration: none;
 }
-
 a:hover {
   text-decoration: none;
   color: #BBB0D6
@@ -74,7 +73,7 @@ header ol {
   list-style: none
 }
 header nav {
-    padding: 0 0.5rem
+  padding: 0 0.5rem
 }
 
 header a {
@@ -87,8 +86,8 @@ header .current a {
   font-weight: bold;
 }
 header a:hover {
-  color: #3F4F6F;
-  text-decoration: none;
+  color: #0F0F1F;
+  text-decoration: underline;
 }
 
 .current-header {
@@ -165,7 +164,39 @@ pre.chroma code {
   padding: 0 0.4rem;
 }
 
-/* Images, tables, misc. */
+/* Blockquote */
+blockquote {
+  background: #282C34;
+  border-left: 2px solid #D0AF4C;
+  border-radius: 6px 6px 6px 6px;
+  padding: 3px 2em 5px;
+  line-height: 1.5em;
+}
+
+/* Tables */
+table {
+  margin: auto;
+  border-radius: 4px 4px 4px 4px;
+  border-top: 1px solid #D0AF4C;
+  border-left: 1px solid #D0AF4C;
+  border-right: 1px solid #D0AF4C;
+  border-bottom: 1px solid #D0AF4C;
+}
+table thead th {
+  border-bottom: 1px solid #D0AF4C;
+  line-height: 1.3em;
+}
+th, td {
+  padding: 5px;
+}
+tr:nth-child(odd) {
+  background: #282C34;
+}
+tr:nth-child(even) {
+  background: #383C44;
+}
+
+/* Images, vids, misc. */
 img, iframe, video {
   max-width: 100%;
   height: auto;
@@ -183,22 +214,6 @@ main {
 main a {
   font-weight: bold;
 }
-blockquote {
-  background: #282C34;
-  border-left: 2px solid #D0AF4C;
-  border-radius: 6px 6px 6px 6px;
-  padding: 3px 2em 5px;
-  line-height: 1.5em;
-}
-
-table {
-  margin: auto;
-  border-top: 1px solid #666;
-  border-bottom: 1px solid #666;
-}
-table thead th { border-bottom: 1px solid #ddd; }
-th, td { padding: 5px; }
-tr:nth-child(even) { background: #eee }
 
 .content-wrapper {
   padding: 0px 12px 0px 12px;
