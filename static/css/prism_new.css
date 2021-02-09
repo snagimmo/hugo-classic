@@ -1,5 +1,5 @@
 /* PrismJS 1.23.0
-https://prismjs.com/download.html#themes=prism-twilight&languages=markup+css+clike+javascript+apacheconf+arduino+aspnet+bash+basic+batch+c+csharp+cpp+clojure+cmake+coffeescript+crystal+css-extras+d+diff+django+docker+dot+elixir+elm+erlang+fsharp+git+go+graphql+haskell+http+hpkp+hsts+ignore+ini+java+javadoc+javadoclike+javastacktrace+jsdoc+json+json5+julia+kotlin+latex+lisp+lua+makefile+markdown+markup-templating+matlab+mongodb+nginx+nim+nix+objectivec+ocaml+opencl+perl+php+phpdoc+php-extras+powerquery+powershell+processing+promql+properties+python+r+jsx+tsx+regex+ruby+rust+scala+sql+swift+textile+toml+typescript+typoscript+unrealscript+uri+vbnet+vim+visual-basic+wasm+wiki+xml-doc+yaml&plugins=line-highlight+line-numbers+file-highlight+show-language+highlight-keywords+toolbar+copy-to-clipboard+diff-highlight */
+https://prismjs.com/download.html#themes=prism-twilight&languages=markup+css+clike+javascript+apacheconf+arduino+aspnet+bash+basic+batch+c+csharp+cpp+clojure+cmake+coffeescript+crystal+css-extras+d+diff+django+docker+dot+elixir+elm+erlang+fsharp+git+go+graphql+haskell+http+hpkp+hsts+ignore+ini+java+javadoc+javadoclike+javastacktrace+jsdoc+json+json5+julia+kotlin+latex+lisp+lua+makefile+markdown+markup-templating+matlab+mongodb+nginx+nim+nix+objectivec+ocaml+opencl+perl+php+phpdoc+php-extras+powerquery+powershell+processing+promql+properties+python+r+jsx+tsx+regex+ruby+rust+scala+sql+swift+textile+toml+typescript+typoscript+unrealscript+uri+vbnet+vim+visual-basic+wasm+wiki+xml-doc+yaml&plugins=line-numbers+file-highlight+highlight-keywords+toolbar+copy-to-clipboard+diff-highlight */
 /**
  * prism.js Twilight theme
  * Based (more or less) on the Twilight theme originally of Textmate fame.
@@ -8,16 +8,16 @@ https://prismjs.com/download.html#themes=prism-twilight&languages=markup+css+cli
 code[class*="language-"],
 pre[class*="language-"] {
 	color: white;
-	background: #282C34;
-	background-color: #282C34;
-	/* font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace; */
-	/* font-size: 1em; */
+	background: none;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
 	text-align: left;
-	/* text-shadow: 0 -.1em .2em black; */
+	text-shadow: 0 -.1em .2em black;
 	white-space: pre;
 	word-spacing: normal;
 	word-break: normal;
 	word-wrap: normal;
+	line-height: 1.5;
 
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
@@ -31,25 +31,27 @@ pre[class*="language-"] {
 
 pre[class*="language-"],
 :not(pre) > code[class*="language-"] {
-	background: #282C34;
+	background: hsl(0, 0%, 8%); /* #141414 */
 }
 
 /* Code blocks */
 pre[class*="language-"] {
-	/* box-shadow: 1px 1px .5em black inset; */
-	margin: 1em 0;
+	border-radius: .5em;
+	border: .3em solid hsl(0, 0%, 33%); /* #282A2B */
+	box-shadow: 1px 1px .5em black inset;
+	margin: .5em 0;
 	overflow: auto;
 	padding: 1em;
 }
 
 pre[class*="language-"]::-moz-selection {
 	/* Firefox */
-	background: #282C34;
+	background: hsl(200, 4%, 16%); /* #282A2B */
 }
 
 pre[class*="language-"]::selection {
 	/* Safari */
-	background: #282C34;
+	background: hsl(200, 4%, 16%); /* #282A2B */
 }
 
 /* Text Selection colour */
@@ -68,7 +70,8 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 /* Inline code */
 :not(pre) > code[class*="language-"] {
 	border-radius: .3em;
-	border: 1px solid #D0AF4C;
+	border: .13em solid hsl(0, 0%, 33%); /* #545454 */
+	box-shadow: 1px 1px .3em -.1em black inset;
 	padding: .15em .2em .05em;
 	white-space: normal;
 }
@@ -197,77 +200,6 @@ pre[data-line] {
 	top: auto;
 }
 
-pre[data-line] {
-	position: relative;
-	padding: 1em 0 1em 3em;
-}
-
-.line-highlight {
-	position: absolute;
-	left: 0;
-	right: 0;
-	padding: inherit 0;
-	margin-top: 1em; /* Same as .prism’s padding-top */
-
-	background: hsla(24, 20%, 50%,.08);
-	background: linear-gradient(to right, hsla(24, 20%, 50%,.1) 70%, hsla(24, 20%, 50%,0));
-
-	pointer-events: none;
-
-	line-height: inherit;
-	white-space: pre;
-}
-
-@media print {
-	.line-highlight {
-		/*
-		 * This will prevent browsers from replacing the background color with white.
-		 * It's necessary because the element is layered on top of the displayed code.
-		 */
-		-webkit-print-color-adjust: exact;
-		color-adjust: exact;
-	}
-}
-
-	.line-highlight:before,
-	.line-highlight[data-end]:after {
-		content: attr(data-start);
-		position: absolute;
-		top: .4em;
-		left: .6em;
-		min-width: 1em;
-		padding: 0 .5em;
-		background-color: hsla(24, 20%, 50%,.4);
-		color: hsl(24, 20%, 95%);
-		font: bold 65%/1.5 sans-serif;
-		text-align: center;
-		vertical-align: .3em;
-		border-radius: 999px;
-		text-shadow: none;
-		box-shadow: 0 1px white;
-	}
-
-	.line-highlight[data-end]:after {
-		content: attr(data-end);
-		top: auto;
-		bottom: .4em;
-	}
-
-.line-numbers .line-highlight:before,
-.line-numbers .line-highlight:after {
-	content: none;
-}
-
-pre[id].linkable-line-numbers span.line-numbers-rows {
-	pointer-events: all;
-}
-pre[id].linkable-line-numbers span.line-numbers-rows > span:before {
-	cursor: pointer;
-}
-pre[id].linkable-line-numbers span.line-numbers-rows > span:hover:before {
-	background-color: rgba(128, 128, 128, .2);
-}
-
 pre[class*="language-"].line-numbers {
 	position: relative;
 	padding-left: 3.8em;
@@ -315,8 +247,8 @@ div.code-toolbar {
 
 div.code-toolbar > .toolbar {
 	position: absolute;
-	top: .05em;
-	right: .4em;
+	top: .3em;
+	right: .2em;
 	transition: opacity 0.3s ease-in-out;
 	opacity: 0;
 }
@@ -358,11 +290,10 @@ div.code-toolbar > .toolbar span {
 	color: #bbb;
 	font-size: .8em;
 	padding: 0 .5em;
-    margin-left: .5em;
 	background: #f5f2f0;
 	background: rgba(224, 224, 224, 0.2);
 	box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
-	border-radius: .2em;
+	border-radius: .5em;
 }
 
 div.code-toolbar > .toolbar a:hover,
