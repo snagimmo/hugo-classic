@@ -106,14 +106,15 @@ pre {
   overflow-x: auto;
   white-space: pre;
   text-overflow: clip;
-  line-height: 1.5em;
+  max-height: 700px;
+  margin-bottom: 1em;
+  padding: 15px 15px 15px 20px;
 }
-pre.code {
-  max-height: 500px;
+pre > code {
   overflow: scroll;
   white-space: pre !important;
   text-overflow: clip !important;
-  padding-left: 5px;
+  background-color: #282C34;
 }
 
 /* Show line number */
@@ -121,35 +122,38 @@ pre.code {
   counter-increment: linenumber;
   background: #282C34;
 }
-/* .code-line:nth-child(even) { */
+/* .code-line:nth-child(odd) { */
 /*   background: #282C34; */
 /* } */
 .code-line:before {
-  content: counter(linenumber);
+  content: counter(linenumber, decimal-leading-zero);
   display: inline-block;
   border-right: 1px solid #D0AF4C;
   background: #282C34;
-  color: #ccc;
+  color: #999;
   font-size: 0.9em;
-  width: 0.9em;
-  text-align: right;
-  padding-right: 0.15em;
+  width: 0.5em;
+  text-align: justify;
+  padding-right: 1.05em;
+  margin-left: -0.7em;
+  margin-right: 1.2em;
 }
 
-/* Show filename */
+/* Show filetype or filename */
 pre.chroma code {
   background: #282C34;
-  margin-top: -28px;
+  margin-top: -20px;
   padding-top: 40px;
   padding-bottom: 12px;
 }
 .code-name {
   display: inline-block;
   background: #D0AF4C;
-  outline-color: #282C34;
   color: #0F0F1F;
   border-radius: 0 0 4px 0;
-  padding: 0px 8px;
+  padding: 0px 9px;
+  top: -1rem;
+  left: -1.3rem;
   position: relative;
 }
 
@@ -183,7 +187,7 @@ blockquote {
   background: #282C34;
   border-left: 2px solid #D0AF4C;
   border-radius: 6px 6px 6px 6px;
-  padding: 3px 2em 3px;
+  padding: 3px 2em 5px;
   line-height: 1.5em;
 }
 

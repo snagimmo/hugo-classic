@@ -34,7 +34,12 @@ pre, code {
     'Segoe UI Emoji',
     'Segoe UI Symbol',
     sans-serif;
-  font-size: 1.05rem
+  font-size: 1.04rem;
+  line-height: 1.45em;
+}
+.code-line {
+  font-size: 1em;
+  line-height: 1.5em;
 }
 .code-name {
   font-family:
