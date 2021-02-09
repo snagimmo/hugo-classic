@@ -42,15 +42,6 @@ pre, code {
   line-height: 1.5em;
 }
 .code-name {
-  font-family:
-    'Consolas',
-    'Ricty Diminished',
-    Helvetica,
-    Arial,
-    'Apple Color Emoji',
-    'Segoe UI Emoji',
-    'Segoe UI Symbol',
-    sans-serif;
   font-weight: bold;
   font-size: 1.05rem;
 }
