@@ -175,6 +175,7 @@ blockquote {
 
 /* Tables */
 table {
+  padding: 1px 1px 1px 1px;
   margin: auto;
   border-radius: 4px 4px 4px 4px;
   border-top: 1px solid #D0AF4C;
