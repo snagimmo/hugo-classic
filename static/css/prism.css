@@ -1,5 +1,5 @@
 /* PrismJS 1.23.0
-https://prismjs.com/download.html#themes=prism-twilight&languages=markup+css+clike+javascript+apacheconf+arduino+aspnet+bash+basic+batch+c+csharp+cpp+clojure+cmake+coffeescript+crystal+css-extras+d+diff+django+docker+dot+elixir+elm+erlang+fsharp+git+go+graphql+haskell+http+hpkp+hsts+ignore+ini+java+javadoc+javadoclike+javastacktrace+jsdoc+json+json5+julia+kotlin+latex+lisp+lua+makefile+markdown+markup-templating+matlab+mongodb+nginx+nim+nix+objectivec+ocaml+opencl+perl+php+phpdoc+php-extras+powerquery+powershell+processing+promql+properties+python+r+jsx+tsx+regex+ruby+rust+scala+sql+swift+textile+toml+typescript+typoscript+unrealscript+uri+vbnet+vim+visual-basic+wasm+wiki+xml-doc+yaml&plugins=highlight-keywords+toolbar+copy-to-clipboard+diff-highlight */
+https://prismjs.com/download.html#themes=prism-twilight&languages=markup+css+clike+javascript+apacheconf+arduino+aspnet+bash+basic+batch+c+csharp+cpp+clojure+cmake+coffeescript+crystal+css-extras+d+diff+django+docker+dot+elixir+elm+erlang+fsharp+git+go+graphql+haskell+http+hpkp+hsts+ignore+ini+java+javadoc+javadoclike+javastacktrace+jsdoc+json+json5+julia+kotlin+latex+lisp+lua+makefile+markdown+markup-templating+matlab+mongodb+nginx+nim+nix+objectivec+ocaml+opencl+perl+php+phpdoc+php-extras+powerquery+powershell+processing+promql+properties+python+r+jsx+tsx+regex+ruby+rust+scala+sql+swift+textile+toml+typescript+typoscript+unrealscript+uri+vbnet+vim+visual-basic+wasm+wiki+xml-doc+yaml&plugins=line-highlight+line-numbers+file-highlight+show-language+highlight-keywords+toolbar+copy-to-clipboard+diff-highlight */
 /**
  * prism.js Twilight theme
  * Based (more or less) on the Twilight theme originally of Textmate fame.
@@ -8,16 +8,12 @@ https://prismjs.com/download.html#themes=prism-twilight&languages=markup+css+cli
 code[class*="language-"],
 pre[class*="language-"] {
 	color: white;
-	background: none;
-	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-	font-size: 1em;
+	background: #282C34;
 	text-align: left;
-	text-shadow: 0 -.1em .2em black;
 	white-space: pre;
 	word-spacing: normal;
 	word-break: normal;
 	word-wrap: normal;
-	line-height: 1.5;
 
 	-moz-tab-size: 4;
 	-o-tab-size: 4;
@@ -31,27 +27,24 @@ pre[class*="language-"] {
 
 pre[class*="language-"],
 :not(pre) > code[class*="language-"] {
-	background: hsl(0, 0%, 8%); /* #141414 */
+	background: #282C34;
 }
 
 /* Code blocks */
 pre[class*="language-"] {
-	border-radius: .5em;
-	border: .3em solid hsl(0, 0%, 33%); /* #282A2B */
-	box-shadow: 1px 1px .5em black inset;
-	margin: .5em 0;
+	margin: 1em 0;
 	overflow: auto;
 	padding: 1em;
 }
 
 pre[class*="language-"]::-moz-selection {
 	/* Firefox */
-	background: hsl(200, 4%, 16%); /* #282A2B */
+	background: #282C34;
 }
 
 pre[class*="language-"]::selection {
 	/* Safari */
-	background: hsl(200, 4%, 16%); /* #282A2B */
+	background: #282C34;
 }
 
 /* Text Selection colour */
@@ -70,8 +63,7 @@ code[class*="language-"]::selection, code[class*="language-"] ::selection {
 /* Inline code */
 :not(pre) > code[class*="language-"] {
 	border-radius: .3em;
-	border: .13em solid hsl(0, 0%, 33%); /* #545454 */
-	box-shadow: 1px 1px .3em -.1em black inset;
+	border: 1px solid #D0AF4C;
 	padding: .15em .2em .05em;
 	white-space: normal;
 }
@@ -200,14 +192,55 @@ pre[data-line] {
 	top: auto;
 }
 
+pre[class*="language-"].line-numbers {
+	position: relative;
+	padding-left: 3.8em;
+	counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+	position: relative;
+	white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+	position: absolute;
+	pointer-events: none;
+	top: 0;
+	font-size: 100%;
+	left: -3.8em;
+	width: 3em; /* works for line-numbers below 1000 lines */
+	letter-spacing: -1px;
+	border-right: 1px solid #999;
+
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+
+}
+
+	.line-numbers-rows > span {
+		display: block;
+		counter-increment: linenumber;
+	}
+
+		.line-numbers-rows > span:before {
+			content: counter(linenumber);
+			color: #999;
+			display: block;
+			padding-right: 0.8em;
+			text-align: right;
+		}
+
 div.code-toolbar {
 	position: relative;
 }
 
 div.code-toolbar > .toolbar {
 	position: absolute;
-	top: .3em;
-	right: .2em;
+	top: .05em;
+	right: .4em;
 	transition: opacity 0.3s ease-in-out;
 	opacity: 0;
 }
@@ -249,10 +282,11 @@ div.code-toolbar > .toolbar span {
 	color: #bbb;
 	font-size: .8em;
 	padding: 0 .5em;
+    margin-left: .5em;
 	background: #f5f2f0;
 	background: rgba(224, 224, 224, 0.2);
 	box-shadow: 0 2px 0 0 rgba(0,0,0,0.2);
-	border-radius: .5em;
+	border-radius: .2em;
 }
 
 div.code-toolbar > .toolbar a:hover,

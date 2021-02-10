@@ -99,21 +99,15 @@ header a:hover {
 
 /* Code Boxes */
 pre {
-  background: #282C34;
+  background: #282C34 !important;
   border: 1px solid #D0AF4C;
-  border-radius: 4px 4px 4px 4px;
+  border-radius: .3em;
   overflow-x: auto;
   white-space: pre;
   text-overflow: clip;
   max-height: 700px;
   margin-bottom: 1em;
-  padding: 15px 15px 15px 20px;
-}
-pre > code {
-  overflow: scroll;
-  white-space: pre !important;
-  text-overflow: clip !important;
-  background-color: #282C34;
+  padding: 1em 1em 1em 1.2em;
 }
 
 /* Show line number */
@@ -149,10 +143,10 @@ pre.chroma code {
   display: inline-block;
   background: #D0AF4C;
   color: #0F0F1F;
-  border-radius: 0 0 4px 0;
-  padding: 0px 9px;
-  top: -1rem;
-  left: -1.3rem;
+  border-radius: 0 0 .3em 0;
+  padding: .01em .6em;
+  top: -1.05rem;
+  left: -1.2em;
   position: relative;
 }
 
@@ -168,16 +162,16 @@ pre.chroma code {
 blockquote {
   background: #282C34;
   border-left: 2px solid #D0AF4C;
-  border-radius: 6px 6px 6px 6px;
+  border-radius: .3em;
   padding: 3px 2em 5px;
   line-height: 1.5em;
 }
 
 /* Tables */
 table {
-  padding: 1px 1px 1px 1px;
+  padding: 1px;
   margin: auto;
-  border-radius: 4px 4px 4px 4px;
+  border-radius: .2em;
   border-top: 1px solid #D0AF4C;
   border-left: 1px solid #D0AF4C;
   border-right: 1px solid #D0AF4C;
