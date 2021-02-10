@@ -131,7 +131,7 @@ pre {
 /* Show filetype or filename */
 .highlight > div > pre > .code-name {
   border-radius: .2em 0 .3em 0;
-  padding: 0em .5em .04em .5em;
+  padding: .02em .5em .04em .5em;
   margin: -2.2em 0 0 -2em;
 }
 .code-name {
