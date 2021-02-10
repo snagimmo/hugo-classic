@@ -113,16 +113,11 @@ pre {
 /* Show line number */
 .code-line {
   counter-increment: linenumber;
-  /* background: #282C34; */
 }
-/* .code-line:nth-child(odd) { */
-/*   background: #282C34; */
-/* } */
 .code-line:before {
   content: counter(linenumber, decimal-leading-zero);
   display: inline-block;
   border-right: 1px solid #D0AF4C;
-  /* background: #282C34; */
   color: #999;
   font-size: 0.9em;
   width: 0.5em;
@@ -133,12 +128,6 @@ pre {
 }
 
 /* Show filetype or filename */
-pre.chroma code {
-  background: #282C34;
-  margin-top: -20px;
-  padding-top: 40px;
-  padding-bottom: 12px;
-}
 .code-name {
   display: inline-block;
   background: #D0AF4C;
