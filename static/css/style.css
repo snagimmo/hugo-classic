@@ -115,9 +115,6 @@ pre {
   counter-increment: linenumber;
   background: #282C34;
 }
-/* .code-line:nth-child(odd) { */
-/*   background: #282C34; */
-/* } */
 .code-line:before {
   content: counter(linenumber, decimal-leading-zero);
   display: inline-block;
@@ -133,21 +130,17 @@ pre {
 }
 
 /* Show filetype or filename */
-pre.chroma code {
-  background: #282C34;
-  margin-top: -20px;
-  padding-top: 40px;
-  padding-bottom: 12px;
+.highlight > div > pre > .code-name {
+  border-radius: .2em 0 .3em 0;
+  padding: 0em .5em .04em .5em;
+  margin: -2.2em 0 0 -2em;
 }
 .code-name {
-  display: inline-block;
+  display: block;
   background: #D0AF4C;
   color: #0F0F1F;
-  border-radius: 0 0 .3em 0;
-  padding: .01em .6em;
-  top: -1.05rem;
-  left: -1.2em;
-  position: relative;
+  margin-bottom: 1em;
+  position: absolute;
 }
 
 /* Single code lines */
