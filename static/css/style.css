@@ -113,7 +113,6 @@ pre {
 /* Show line number */
 .code-line {
   counter-increment: linenumber;
-  background: #282C34;
 }
 .code-line:before {
   content: counter(linenumber, decimal-leading-zero);
