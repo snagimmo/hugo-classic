@@ -142,6 +142,20 @@ pre {
   position: absolute;
 }
 
+/* Custom scrollbar */
+pre::-webkit-scrollbar {
+  height: 8px;
+}
+pre::-webkit-scrollbar-track {
+  background: rgba(#D0AF4C,0,1);
+  border: none;
+}
+pre::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background: rgba(#D0AF4C,0,1);
+  box-shadow: inset 0 0 5px rgba(228,195,96,0.7);
+}
+
 /* Single code lines */
 :not(pre) > code {
   background: #282C34;
