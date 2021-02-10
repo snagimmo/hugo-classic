@@ -36,18 +36,17 @@ output:
 footer a { text-decoration: none; }
 hr {
   border-color: #eee;
-}
-.article-meta > hr {
   border-width: .05em;
   height: 1px;
   border-style: dashed;
+}
+.article-meta > hr {
+  height: 1.2px;
   margin-top: 2em;
   margin-bottom: 2em;
 }
 footer > hr {
-  border-width: .05em;
-  height: 1px;
-  border-style: dashed;
+  height: 1.2px;
 }
 
 .pull-left {
