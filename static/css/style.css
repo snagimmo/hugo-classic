@@ -25,20 +25,34 @@ output:
 /* Header and Footer */
 .menu li { display: inline-block; }
 .article-meta, .menu a {
-  text-decoration: none;
-  background: #3F4F6F;
   color: #ddd;
   padding: 5px;
-  border-radius: 5px;
-  border-style: dotted;
-  border-width: 1px;
-  margin-bottom: 20px;
+  text-align: left;
 }
+.article-meta a { font-size: 1.15em; }
 
 .terms { font-size: .9em; }
-.menu, .article-meta, footer { text-align: center; }
-.title { font-size: 1.1em; }
+.menu, footer { text-align: center; }
+.title { font-size: 1.2em; }
+.date { font-size: 1.03em; }
 footer a { text-decoration: none; }
+
+hr {
+  border-color: #eee;
+  border-width: .05em;
+  height: 1px;
+  border-style: dashed;
+}
+.article-meta > hr {
+  height: 1.2px;
+  margin-top: 2em;
+  margin-bottom: 1.2em;
+}
+footer > hr {
+  height: 1.2px;
+  margin-top: 2em;
+  margin-bottom: 1.2em;
+}
 
 .pull-left {
   float: left
@@ -80,6 +94,7 @@ header a {
   color: #0F0F1F;
   line-height: 1.75rem;
   padding: 0 0.5rem;
+  font-size: 1.01em;
 }
 header .current a {
   color: #0F0F1F;
