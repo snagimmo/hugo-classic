@@ -30,10 +30,10 @@ pre, code {
     'Ricty Diminished',
     Helvetica,
     Arial,
+    sans-serif,
     'Apple Color Emoji',
     'Segoe UI Emoji',
-    'Segoe UI Symbol',
-    sans-serif;
+    'Segoe UI Symbol';
   font-size: 1.04rem;
   line-height: 1.45em;
 }

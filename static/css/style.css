@@ -35,6 +35,7 @@ output:
 .menu, footer { text-align: center; }
 .title { font-size: 1.2em; }
 .date { font-size: 1.03em; }
+footer { font-size: 0.95em;; }
 footer a { text-decoration: none; }
 
 hr {
