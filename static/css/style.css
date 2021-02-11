@@ -29,11 +29,14 @@ output:
   padding: 5px;
   text-align: left;
 }
+.article-meta a { font-size: 1.15em; }
 
 .terms { font-size: .9em; }
 .menu, footer { text-align: center; }
-.title { font-size: 1.1em; }
+.title { font-size: 1.2em; }
+.date { font-size: 1.03em; }
 footer a { text-decoration: none; }
+
 hr {
   border-color: #eee;
   border-width: .05em;
@@ -91,6 +94,7 @@ header a {
   color: #0F0F1F;
   line-height: 1.75rem;
   padding: 0 0.5rem;
+  font-size: 1.01em;
 }
 header .current a {
   color: #0F0F1F;
@@ -124,6 +128,8 @@ pre {
 /* Show line number */
 .code-line {
   counter-increment: linenumber;
+  font-size: 1em;
+  line-height: 1.5em;
 }
 .code-line:before {
   content: counter(linenumber, decimal-leading-zero);
@@ -151,6 +157,8 @@ pre {
   color: #0F0F1F;
   margin-bottom: 1em;
   position: absolute;
+  font-weight: bold;
+  font-size: 1.05rem;
 }
 
 /* Custom scrollbar */
