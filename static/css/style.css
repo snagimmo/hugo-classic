@@ -29,12 +29,12 @@ output:
   padding: 5px;
   text-align: left;
 }
-.article-meta a { font-size: 1.15em; }
+.article-meta a { font-size: 1.14em; }
 
 .terms { font-size: .9em; }
 .menu, footer { text-align: center; }
 .title { font-size: 1.2em; }
-.date { font-size: 1.03em; }
+.date { font-size: 1.04em; }
 footer { font-size: 0.95em;; }
 footer a { text-decoration: none; }
 
@@ -222,6 +222,13 @@ tr:nth-child(even) {
 img, iframe, video {
   max-width: 100%;
   height: auto;
+}
+.inline-svg {
+  display: inline-block;
+  height: 1.15rem;
+  width: 1.15rem;
+  top: 0.15rem;
+  position: relative;
 }
 main {
   hyphens: auto;
