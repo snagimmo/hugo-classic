@@ -7,8 +7,8 @@
     {{ with ($.Param $i) }}
       {{ if eq $i "categories" }}{{ partial "fontawesome.html" "folder" }}{{ else if eq $i "tags" }}{{ partial "fontawesome.html" "tag" }}{{ else }}{{ $i | title }}:{{ end }}
       {{ $counter := 0 }}
-      {{ range $k := . }}{{ if gt $counter 0 }},&nbsp;{{ end }}<a href="{{ relURL (print "/" $i "/" $k | urlize) }}">{{$k}}</a>{{ $counter = (add $counter 1) }}{{ end }}
-    {{ end }}&nbsp;
+      {{ range $k := . }}{{ if gt $counter 0 }},&nbsp;{{ end }}<a href="{{ relURL (print "/" $i "/" $k | urlize) }}">{{$k}}</a>{{ $counter = (add $counter 1) }}{{ end }}&nbsp;
+    {{ end }}
   {{ end }}
 </p>
 <hr>
