@@ -180,9 +180,9 @@ pre::-webkit-scrollbar-thumb {
 /* Single code lines */
 :not(pre) > code {
   background: #282C34;
-  border-bottom: 2px solid #D0AF4C;
+  border-bottom: 1px solid #D0AF4C;
   font-weight: 500;
-  padding: 0 0.4rem;
+  padding: 0 0.4rem 0.1rem 0.4rem;
 }
 
 /* Blockquote */
