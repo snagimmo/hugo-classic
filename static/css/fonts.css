@@ -42,6 +42,7 @@ html { font-family:
     'Apple Color Emoji',
     'Segoe UI Emoji',
     'Segoe UI Symbol';
+    font-size: 1.2em;
 }
 pre, code {
   font-family:
@@ -74,6 +75,20 @@ pre, code {
     Helvetica,
     Arial,
     sans-serif;
-  font-size: 1.2em;
+  font-size: 1.7em;
+  line-height: 1.1em;
+}
+.home-description{
+  font-family:
+    'Consolas',
+    'Segoe UI',
+    'Courier New',
+    Courier,
+    "Hiragino Kaku Gothic ProN",
+    "ヒラギノ角ゴ ProN",
+    Helvetica,
+    Arial,
+    sans-serif;
+  font-size: 0.9em;
   line-height: 1.3em;
 }

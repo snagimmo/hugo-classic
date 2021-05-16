@@ -16,10 +16,16 @@
       {{ range .Site.Menus.feed }}
       {{ $name := lower .Name }}
       <li class="pull-right">
-        <a href="{{ .URL }}">feed</a>
+        <a href="{{ .URL }}">{{ partial "fontawesome.html" "rss_small" }}</a>
       </li>
       {{end}}
 
+      {{ range .Site.Menus.link }}
+      {{ $name := lower .Name }}
+      <li class="pull-link">
+          <a href="{{ .URL }}">{{ partial "fontawesome.html" $name }}</a>
+      </li>
+      {{end}}
     </ul>
   </nav>
 </header>

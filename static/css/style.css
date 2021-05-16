@@ -1,3 +1,6 @@
+.home-title {
+  text-align: center;
+}
 body {
   background: #0F0F1F;
   color: #ddd;
@@ -64,8 +67,12 @@ footer > hr {
 .pull-left {
   float: left
 }
+.pull-link {
+  float: right;
+  margin-top: 0.1em;
+}
 .pull-right {
-  float: right
+  float: right;
 }
 
 a {
@@ -82,7 +89,7 @@ header {
   position: relative;
   width: 100%;
   height: 1.75rem;
-  font-size: 1rem;
+  font-size: 0.92rem;
   background: #D0AF4C;
   border-bottom: 1px solid #000;
 }
@@ -256,8 +263,10 @@ main a {
 
 #main-image {
   min-width: 40px;
-  float: right;
-  padding: 10px;
-  margin-left: 0.35em;
+  float: none;
+  margin-top: 0em;
+  margin-left: 1.3rem;
+  margin-bottom: 0em;
+  margin-right: 0.35em;
   display: block;
 }
