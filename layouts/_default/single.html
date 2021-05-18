@@ -1,19 +1,20 @@
 {{ partial "header.html" . }}
 {{ partial "search.html" . }}
+<br>
 
 <div class="article-meta">
-<h1><span class="title">{{ .Title | markdownify }}</span></h1>
-{{ if .Params.date }}<span class="date">{{ partial "fontawesome.html" "clock" }}{{ .Date.Format "2006/01/02" }}</span>{{ end }}
-<p class="terms">
-  {{ range $i := (slice "categories" "tags") }}
-    {{ with ($.Param $i) }}
-      {{ if eq $i "categories" }}{{ partial "fontawesome.html" "folder" }}{{ else if eq $i "tags" }}{{ partial "fontawesome.html" "tag" }}{{ else }}{{ $i | title }}:{{ end }}
-      {{ $counter := 0 }}
-      {{ range $k := . }}{{ if gt $counter 0 }},&nbsp;{{ end }}<a href='{{ relURL (print "/" $i "/" $k | urlize) }}'>{{$k}}</a>{{ $counter = (add $counter 1) }}{{ end }}&nbsp;
+  <h2><span class="title">{{ .Title | markdownify }}</span></h2>
+  {{ if .Params.date }}<span class="date">{{ partial "fontawesome.html" "clock" }}{{ .Date.Format "2006/01/02" }}</span>{{ end }}
+  <p class="terms">
+    {{ range $i := (slice "categories" "tags") }}
+      {{ with ($.Param $i) }}
+        {{ if eq $i "categories" }}{{ partial "fontawesome.html" "folder" }}{{ else if eq $i "tags" }}{{ partial "fontawesome.html" "tag" }}{{ else }}{{ $i | title }}:{{ end }}
+        {{ $counter := 0 }}
+        {{ range $k := . }}{{ if gt $counter 0 }},&nbsp;{{ end }}<a href='{{ relURL (print "/" $i "/" $k | urlize) }}'>{{$k}}</a>{{ $counter = (add $counter 1) }}{{ end }}&nbsp;
+      {{ end }}
     {{ end }}
-  {{ end }}
-</p>
-<hr>
+  </p>
+  <hr>
 </div>
 
 {{ if .Params.toc }}{{ .TableOfContents }}{{ end }}

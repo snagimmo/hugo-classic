@@ -34,10 +34,10 @@ output:
 }
 .article-meta a { font-size: 1.14em; }
 
-.terms { font-size: .9em; }
 .menu, footer { text-align: center; }
 .title { font-size: 1.2em; }
 .date { font-size: 1.04em; }
+.terms { font-size: .9em; }
 footer { font-size: 0.95em;; }
 footer a { text-decoration: none; }
 .notfound {
@@ -76,7 +76,7 @@ footer > hr {
 }
 
 a {
-  color: #A6A5C4;
+  color: #D0AF4C;
   text-decoration: none;
 }
 a:hover {
@@ -327,6 +327,8 @@ main a {
   color: #ddd;
   font-size: 0.75em;
   outline: 0; /* don't display outline*/
+  position: relative;
+  z-index: 1;
 }
 .search-results a {
   color: #A6A5C4;
