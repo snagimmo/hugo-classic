@@ -1,0 +1,9 @@
+<div class="search-area">
+  <form class="search-form" action="{{ .URL | safeURL }}" onkeyup="search()">
+    <input class="search-text" id="search-query" placeholder="Search this site" autocomplete="off"/>
+  </form>
+  <div class="search-button">
+    {{ partial "fontawesome.html" "search" }}
+  </div>
+  <ul class="search-results" id="results">
+</div>

@@ -3,15 +3,28 @@
       <hr/>
       {{ $pubyear := now.Format "2006" }}
       {{ .Site.Params.copyright }}
-      {{ if eq $pubyear .Site.Params.inityear }}{{ .Site.Params.inityear }}{{ else }}{{ .Site.Params.inityear }}-{{ $pubyear }}{{ end }}
+      {{ .Site.Params.inityear }}{{ if ne $pubyear .Site.Params.inityear }}-{{ $pubyear }}{{ end }}
       {{ .Site.Params.author }}
     </footer>
     <br>
     {{ if and .Site.Params.fathomAnalytics .Site.Params.fathomAnalytics.siteID }}
       {{- partial "analytics/fathom" . -}}
     {{ end }}
+
+    <!-- codeblock scripts -->
     <!-- <script src="/js/codeblock&#45;to&#45;line.js"></script> -->
     <script src="/js/codeblock-filename.js"></script>
+
+    <!-- search scripts with Lunr & jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="/js/lunr.js"></script>
+    <script src="/js/lunr.stemmer.support.js"></script>
+    <script src="/js/tinyseg.js"></script>
+    <script src="/js/lunr.ja.js"></script>
+    <script src="/js/lunr.multi.js"></script>
+    <script src="/js/search.js"></script>
+
+    <!-- TeX script (MathJax ver.3) -->
     {{ partial "mathjax.html" . }}
   </body>
 </html>
