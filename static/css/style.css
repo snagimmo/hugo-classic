@@ -1,13 +1,31 @@
-.home-title {
-  text-align: center;
-}
 body {
   background: #0F0F1F;
   color: #ddd;
-  max-width: 800px;
+  max-width: 930px;
   margin: auto;
   padding: .2em;
   line-height: 1.5em;
+}
+main {
+  hyphens: auto;
+  max-width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.7em;
+  hyphens: auto;
+  display: block;
+  font-size: 1.1em;
+}
+
+.content-wrapper {
+  padding: 0px 12px 0px 12px;
+  font-size: 0.9em;
+}
+.content-wrapper a {
+  text-decoration: none;
+}
+.content-wrapper main a {
+  text-decoration: underline;
 }
 
 /* Table of Contents, if wanted
@@ -34,10 +52,20 @@ output:
 }
 .article-meta a { font-size: 1.14em; }
 
+.home-title { text-align: center; }
 .menu, footer { text-align: center; }
-.title { font-size: 1.2em; }
-.date { font-size: 1.04em; }
-.terms { font-size: .9em; }
+.title {
+  font-size: 1.2em;
+  margin-left: 0.5rem;
+}
+.date {
+  font-size: 0.9em;
+  margin-left: 0.5rem;
+}
+.terms {
+  font-size: 0.8em;
+  margin-left: 0.5rem;
+}
 .postdate { font-size: 0.9em; }
 footer { font-size: 0.95em;; }
 footer a { text-decoration: none; }
@@ -77,11 +105,14 @@ footer > hr {
 }
 
 a {
-  color: #808080;
+  color: #909090;
   text-decoration: none;
 }
 a:hover {
   color: #FFD700;
+  text-decoration: none;
+}
+.recent-posts a {
   text-decoration: none;
 }
 
@@ -173,7 +204,7 @@ pre {
   margin-bottom: 1em;
   position: absolute;
   font-weight: bold;
-  font-size: 1.05rem;
+  font-size: 0.92rem;
 }
 
 /* Custom scrollbar */
@@ -206,6 +237,7 @@ blockquote {
   border-radius: .3em;
   padding: 3px 2em 5px;
   line-height: 1.5em;
+  font-size: 0.85em;
 }
 
 /* Tables */
@@ -217,13 +249,14 @@ table {
   border-left: 1px solid #D0AF4C;
   border-right: 1px solid #D0AF4C;
   border-bottom: 1px solid #D0AF4C;
+  font-size: 0.85em;
 }
 table thead th {
   border-bottom: 1px solid #D0AF4C;
   line-height: 1.3em;
 }
 th, td {
-  padding: 5px;
+  padding: 4px;
 }
 tr:nth-child(odd) {
   background: #282C34;
@@ -243,26 +276,6 @@ img, iframe, video {
   width: 1.15rem;
   top: 0.15rem;
   position: relative;
-}
-main {
-  hyphens: auto;
-  max-width: 650px;
-  margin-left: auto;
-  margin-right: auto;
-  line-height: 1.7em;
-  hyphens: auto;
-  display: block;
-  font-size: 1.1em;
-}
-main a {
-  font-weight: none;
-}
-
-.content-wrapper {
-  padding: 0px 12px 0px 12px;
-}
-.content-wrapper a {
-  text-decoration: underline;
 }
 
 #main-image {

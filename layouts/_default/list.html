@@ -14,7 +14,7 @@
      {{ range (where $pages "Section" "!=" "") }}
      <li>
        <span class="postdate">{{ .Date.Format "2006/01/02" }}</span>
-       <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
+       <span class="recent-posts"><a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></span>
      </li>
      {{ end }}
   </ul>
