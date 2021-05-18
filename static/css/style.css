@@ -38,6 +38,7 @@ output:
 .title { font-size: 1.2em; }
 .date { font-size: 1.04em; }
 .terms { font-size: .9em; }
+.postdate { font-size: 0.9em; }
 footer { font-size: 0.95em;; }
 footer a { text-decoration: none; }
 .notfound {
@@ -76,12 +77,12 @@ footer > hr {
 }
 
 a {
-  color: #D0AF4C;
+  color: #808080;
   text-decoration: none;
 }
 a:hover {
+  color: #FFD700;
   text-decoration: none;
-  color: #d3ccd6
 }
 
 /* Adjust background at your leisure! */
@@ -254,11 +255,14 @@ main {
   font-size: 1.1em;
 }
 main a {
-  font-weight: bold;
+  font-weight: none;
 }
 
 .content-wrapper {
   padding: 0px 12px 0px 12px;
+}
+.content-wrapper a {
+  text-decoration: underline;
 }
 
 #main-image {
@@ -331,12 +335,12 @@ main a {
   z-index: 1;
 }
 .search-results a {
-  color: #A6A5C4;
+  color: #D0AF4C;
   text-decoration: none;
 }
 .search-results a:hover {
+  color: #FFD700;
   text-decoration: none;
-  color: #d3ccd6;
 }
 
 input::placeholder {
