@@ -13,13 +13,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="{{ if .IsHome }}{{ $.Site.Params.Description }}{{ else }}{{ .Description }}{{ end }}">
     <!-- <meta name="description" content="{{ if .Description }}{{ .Description }}{{ else }}{{ .Site.Params.Description }}{{ end }}"> -->
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="{{ .Permalink }}">
-    <meta property="og:image" content="ogp_default.png">
-    <meta property="og:title" content="{{ $.Site.Title }}">
-    <meta name="twitter:card" content="summary">
-    <meta property="twitter:image" content="ogp_default.png">
-    <meta property="twitter:title" content="{{ $.Site.Title }}">
+
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta property="og:image" content="images/profile.png" />
+    <meta property="og:title" content="{{ if .IsHome }}{{ $.Site.Title }}{{ else }}{{ .Title }}{{ end }}" />
+    <meta property="og:description" content="{{ if .IsHome }}{{ $.Site.Params.Description }}{{ else }}{{ .Description }}{{ end }}" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:image" content="images/profile.png" />
+    <meta name="twitter:title" content="{{ if .IsHome }}{{ $.Site.Title }}{{ else }}{{ .Title }}{{ end }}" />
+    <meta name="twitter:description" content="{{ if .IsHome }}{{ $.Site.Params.Description }}{{ else }}{{ .Description }}{{ end }}" />
+
     <title>{{ .Title }} | {{ .Site.Title }}</title>
     <link rel="stylesheet" href="{{ "/css/style.css" | relURL }}" />
     <link rel="stylesheet" href="{{ "/css/fonts.css" | relURL }}" />
@@ -28,6 +32,9 @@
     {{- end }}
 
     {{ partial "head_custom.html" . }}
+
+    <!-- {{ template "_internal/opengraph.html" . }} -->
+    <!-- {{ template "_internal/twitter_cards.html" . }} -->
   </head>
   <body>
     <br/>
