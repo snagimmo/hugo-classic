@@ -406,3 +406,16 @@ input:-ms-input-placeholder {
 input::-ms-input-placeholder {
   color: #bbb;
 }
+
+/* private shortcode */
+.private {
+  background: #fee;
+  color: #f11;
+  padding: 0.5em;
+  border: solid 1px #f11;
+}
+.private::before {
+  content: "------Private------";
+  display: block;
+  font-weight: bolder;
+}
