@@ -20,7 +20,7 @@
       </li>
       {{end}}
 
-      {{ range .Site.Menus.link }}
+      {{ range .Site.Menus.headlink }}
       {{ $name := lower .Name }}
       <li class="pull-link">
           <a href="{{ .URL }}">{{ partial "fontawesome.html" $name }}</a>

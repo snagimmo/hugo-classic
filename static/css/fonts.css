@@ -1,5 +1,5 @@
 @import url('https://rsms.me/inter/inter.css');
-header { font-family:
+header, footer { font-family:
     'Inter',
     'Segoe UI',
     'Courier New',
@@ -13,7 +13,7 @@ header { font-family:
     'Segoe UI Symbol';
 }
 @supports (font-variation-settings: normal) {
-  header { font-family:
+  header, footer { font-family:
       'Inter var',
       'Segoe UI',
       'Courier New',
@@ -106,4 +106,21 @@ pre, code {
     sans-serif;
   font-size: 0.8em;
   line-height: 1.15em;
+}
+.copyright { font-family:
+    'Segoe UI',
+    'Courier New',
+    Courier,
+    "Hiragino Kaku Gothic ProN",
+    "ヒラギノ角ゴ ProN",
+    Meiryo,
+    "メイリオ",
+    monospace,
+    Helvetica,
+    Arial,
+    sans-serif,
+    'Apple Color Emoji',
+    'Segoe UI Emoji',
+    'Segoe UI Symbol';
+    font-size: 1em;
 }
