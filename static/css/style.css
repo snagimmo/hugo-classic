@@ -407,7 +407,7 @@ input::-ms-input-placeholder {
   color: #bbb;
 }
 
-/* private shortcode */
+/* shortcodes */
 .private {
   background: #fee;
   color: #f11;
@@ -418,4 +418,10 @@ input::-ms-input-placeholder {
   content: "------Private------";
   display: block;
   font-weight: bolder;
+}
+
+.steam-link {
+  width: 450px;
+  height: 200px;
+  /* margin: auto; */
 }
