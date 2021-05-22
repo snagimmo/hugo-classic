@@ -5,7 +5,7 @@
       {{ $section := lower .Section }}
       {{ range .Site.Menus.info }}
       {{ $name := lower .Name }}
-      <li class="pull-left {{ if eq $name $title }}current{{ else if eq $section $name }}current{{ else if eq $title (pluralize $name) }}current{{ end }}">
+      <li class="pull-home {{ if eq $name $title }}current{{ else if eq $section $name }}current{{ else if eq $title (pluralize $name) }}current{{ end }}">
         {{ if eq $name $title }}<span class="current-footer">{{ lower .Name }}</span>{{ else }}<a href="{{ .URL }}">{{ lower .Name }}</a>{{ end }}
       </li>
       {{end}}

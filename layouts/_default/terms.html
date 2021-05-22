@@ -1,6 +1,8 @@
 {{ partial "header.html" . }}
 {{ partial "search.html" . }}
+<br>
 
+<div class="content-wrapper">
 <h1>{{ .Title }}</h1>
 
 <ul class="terms-list">
@@ -10,5 +12,6 @@
   </li>
   {{ end }}
 </ul>
+</div>
 
 {{ partial "footer.html" . }}
