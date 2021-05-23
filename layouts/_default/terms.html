@@ -10,6 +10,8 @@
   <li>
     <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }})
   </li>
+  {{ else }}
+  <p>None.</p>
   {{ end }}
 </ul>
 </div>
