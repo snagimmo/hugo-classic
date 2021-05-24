@@ -380,7 +380,7 @@ img, iframe, video {
   width: 450px;
   margin-top: 0em;
   margin-left: 0.1em;
-  display: block;
+  display: inline-block;
 }
 #mail-caption {
   font-size: 0.9em;
