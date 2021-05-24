@@ -4,20 +4,22 @@
       {{- partial "analytics/fathom" . -}}
     {{ end }}
 
-    <!-- codeblock scripts -->
-    <!-- <script src="/js/codeblock&#45;to&#45;line.js"></script> -->
-    <script src="/js/codeblock-filename.js"></script>
+    <div id="footer-scripts">
+      <!-- codeblock scripts -->
+      <!-- <script src="/js/codeblock&#45;to&#45;line.js"></script> -->
+      <script src="/js/codeblock-filename.js"></script>
 
-    <!-- search scripts with Lunr & jQuery -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script src="/js/lunr.js"></script>
-    <script src="/js/lunr.stemmer.support.js"></script>
-    <script src="/js/tinyseg.js"></script>
-    <script src="/js/lunr.ja.js"></script>
-    <script src="/js/lunr.multi.js"></script>
-    <script src="/js/search.js"></script>
+      <!-- search scripts with Lunr & jQuery -->
+      <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+      <script src="/js/lunr.js"></script>
+      <script src="/js/lunr.stemmer.support.js"></script>
+      <script src="/js/tinyseg.js"></script>
+      <script src="/js/lunr.ja.js"></script>
+      <script src="/js/lunr.multi.js"></script>
+      <script src="/js/search.js"></script>
 
-    <!-- TeX script (MathJax ver.3) -->
-    {{ partial "mathjax.html" . }}
+      <!-- TeX script (MathJax ver.3) -->
+      {{ partial "mathjax.html" . }}
+    </div>
   </body>
 </html>

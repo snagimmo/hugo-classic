@@ -78,6 +78,10 @@ output:
   margin-top: 1em;
   padding-bottom: 0.8em;
 }
+.contents {
+  /* width: 0.1em; */
+  /* max-width: 20%; */
+}
 
 hr {
   border-color: #eee;
@@ -110,7 +114,7 @@ hr {
 .pull-link {
   float: right;
   margin-top: 0.1em;
-  margin-left: -0.3em;
+  margin-left: -0.5em;
 }
 
 a {
@@ -147,7 +151,8 @@ header a {
   line-height: 1.75rem;
   padding: 0 0.5rem;
   font-size: 1.01em;
-  margin-left: 0.4em;
+  margin-left: 0.35em;
+  margin-right: -0.2em;
 }
 header .current a {
   color: #0F0F1F;
@@ -163,13 +168,14 @@ header a:hover {
   font-weight: bold;
   line-height: 1.8rem;
   margin-top: 0.1rem;
-  padding-left: 0.7em;
-  padding-right: 0.7em;
+  padding-left: 0.65em;
+  padding-right: 0.65em;
   display: inline-block;
   border-radius: 0.3em;
   border-bottom-left-radius: 0em;
   border-bottom-right-radius: 0em;
-  margin-left: 0.4em;
+  margin-left: 0.35em;
+  margin-right: -0.2em;
 }
 
 footer {
@@ -208,7 +214,7 @@ footer a:hover {
   color: #D0AF4C;
   background: #0F0F1F;
   font-weight: bold;
-  line-height: 1.7rem;
+  line-height: 1.67rem;
   padding-left: 0.8em;
   padding-right: 0.8em;
   padding-bottom: -1em;
@@ -366,6 +372,19 @@ img, iframe, video {
   margin-bottom: 0em;
   margin-right: 0.35em;
   display: block;
+}
+
+#mail-image {
+  position: relative;
+  max-width: 95%;
+  width: 450px;
+  margin-top: 0em;
+  margin-left: 0.1em;
+  display: block;
+}
+#mail-caption {
+  font-size: 0.9em;
+  display: inline-block;
 }
 
 /* Search bar */
