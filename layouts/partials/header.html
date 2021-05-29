@@ -32,11 +32,7 @@
     <link rel="stylesheet" href="{{ . | absURL }}">
     {{- end }}
 
-    {{ with .OutputFormats.Get "RSS" -}}
-        {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
-    {{ end -}}
     {{ partial "head_custom.html" . }}
-
     <!-- {{ template "_internal/opengraph.html" . }} -->
     <!-- {{ template "_internal/twitter_cards.html" . }} -->
   </head>
