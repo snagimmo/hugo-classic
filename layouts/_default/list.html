@@ -1,4 +1,6 @@
 {{ partial "header.html" . }}
+{{ partial "search.html" . }}
+<br>
 
 <div class="content-wrapper">
   {{if not .IsHome }}
@@ -8,14 +10,17 @@
   {{ .Content }}
 
   <ul>
-     {{ $pages := .Pages }}
-     {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
-     {{ range (where $pages "Section" "!=" "") }}
-     <li>
-       <span class="date">{{ .Date.Format "2006/01/02" }}</span>
-       <a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a>
-     </li>
-     {{ end }}
+    {{ $pages := .Pages }}
+    {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
+    {{ range (where $pages "Section" "!=" "") }}
+    <li>
+      <span class="postdate">{{ .Date.Format "2006/01/02" }}</span>
+      <span class="recent-posts"><a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></span>
+    </li>
+    {{ else }}
+    <p>None.</p>
+    {{ end }}
   </ul>
 </div>
+
 {{ partial "footer.html" . }}
