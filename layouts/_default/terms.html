@@ -1,13 +1,19 @@
 {{ partial "header.html" . }}
+{{ partial "search.html" . }}
+<br>
 
+<div class="content-wrapper">
 <h1>{{ .Title }}</h1>
 
-<ul class="terms">
+<ul class="terms-list">
   {{ range .Data.Terms }}
   <li>
     <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a> ({{ .Count }})
   </li>
+  {{ else }}
+  <p>None.</p>
   {{ end }}
 </ul>
+</div>
 
 {{ partial "footer.html" . }}
