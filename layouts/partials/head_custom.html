@@ -9,7 +9,6 @@
       {{ range .Site.Menus.main }}
       {{ $name := lower .Name }}
       <li class="pull-left {{ if eq $name $title }}current{{ else if eq $section $name }}current{{ else if eq $title (pluralize $name) }}current{{ end }}">
-        <!-- {{ if eq $name $title }}<span class="current&#45;header">{{ lower .Title }}</span>{{ else }}<a href="{{ .URL }}">{{ lower .Title }}</a>{{ end }} -->
         {{ if eq $name $title }}<span class="current-header">{{ partial "fontawesome.html" $name }}</span>{{ else }}<a href="{{ .URL }}">{{ partial "fontawesome.html" $name }}</a>{{ end }}
       </li>
       {{end}}
@@ -17,14 +16,14 @@
       {{ range .Site.Menus.feed }}
       {{ $name := lower .Name }}
       <li class="pull-right">
-        <a href="{{ .URL }}">{{ partial "fontawesome.html" "rss" }}</a>
+        <a href="{{ .URL }}" target="_blank">{{ partial "fontawesome.html" "rss" }}</a>
       </li>
       {{end}}
 
       {{ range .Site.Menus.headlink }}
       {{ $name := lower .Name }}
       <li class="pull-link">
-          <a href="{{ .URL }}">{{ partial "fontawesome.html" $name }}</a>
+          <a href="{{ .URL }}" target="_blank">{{ partial "fontawesome.html" $name }}</a>
       </li>
       {{end}}
     </ul>

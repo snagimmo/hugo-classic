@@ -10,19 +10,19 @@
       {{ with ($.Param $i) }}
         {{ if eq $i "categories" }}{{ partial "fontawesome.html" "folder" }}{{ else if eq $i "tags" }}{{ partial "fontawesome.html" "tag" }}{{ else }}{{ $i | title }}:{{ end }}
         {{ $counter := 0 }}
-        {{ range $k := . }}{{ if gt $counter 0 }},&nbsp;{{ end }}<a href='{{ relURL (print "/" $i "/" $k | urlize) }}'>{{$k}}</a>{{ $counter = (add $counter 1) }}{{ end }}&nbsp;
+        {{ range $k := . }}{{ if gt $counter 0 }},&nbsp;{{ end }}<a href='{{ relURL (print "/" $i "/" $k | urlize) }}'>{{$k}}</a>{{ $counter = (add $counter 1) }}{{ end }}&nbsp;&nbsp;
       {{ end }}
     {{ end }}
   </p>
-  <hr>
 </div>
-
-{{ if .Params.toc }}{{ .TableOfContents }}{{ end }}
-
+<hr>
 <div class="content-wrapper">
   <main>
     {{ with .Content }}{{ . }}{{ else }}This content is empty. {{ end }}
   </main>
 </div>
+<hr>
+{{ partial "pagelink.html" . }}
+{{ partial "share.html" . }}
 
 {{ partial "footer.html" . }}
