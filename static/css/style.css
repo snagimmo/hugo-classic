@@ -16,9 +16,26 @@ main {
   display: block;
   font-size: 1.1em;
 }
+main p {
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+main p#mail-caption, .contacts p {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+main h1, main h2, main h3, main h4 {
+  margin-top: 3.5em;
+}
+main .updates h1, main .updates h2, main h3, main h4 {
+  margin-top: 2em;
+}
+main .updates {
+  margin-bottom: 3em;
+}
 
 .content-wrapper {
-  padding: 0px 12px 0px 12px;
+  padding: 0.5em 12px 0.5em 12px;
   font-size: 0.9em;
 }
 .content-wrapper a {
@@ -26,21 +43,6 @@ main {
 }
 .content-wrapper main a {
   text-decoration: underline;
-}
-
-/* Table of Contents, if wanted
-
-Add to yaml:
-
-output:
-  blogdown::html_page:
-    toc: true
-
-    */
-
-#TableOfContents, #TOC {
-  border: 1px solid #eee;
-  border-radius: 5px;
 }
 
 /* Various classes */
@@ -55,7 +57,7 @@ output:
 /* .home-title { text-align: center; } */
 .menu { text-align: center; }
 .title {
-  font-size: 1.2em;
+  font-size: 1.5rem;
   margin-left: 0.5rem;
 }
 .date {
@@ -65,6 +67,7 @@ output:
 .terms {
   font-size: 0.8em;
   margin-left: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 .postdate { font-size: 0.9em; }
 .notfound {
@@ -78,9 +81,49 @@ output:
   margin-top: 1em;
   padding-bottom: 0.8em;
 }
+.footnote-ref {
+  margin: 0.1em;
+  font-weight: 600;
+  color: #D0AF4C;
+}
+.footnotes {
+  margin-top: 4rem;
+  margin-bottom: 3rem;
+  font-size: 0.9em;
+}
+.footnotes p {
+  margin-top: 0.3em;
+  margin-bottom: 0.3em;
+}
 .contacts {
   /* width: 0.1em; */
   /* max-width: 20%; */
+}
+.page-links {
+  margin-top: 1.5rem;
+  margin-bottom: 2.5rem;
+  text-decoration: none !important;
+}
+.arrow-left {
+  float: left;
+  margin-right: 0.5em;
+}
+.arrow-right {
+  float: right;
+  margin-left: 0.5em;
+}
+.prev-link {
+  float: left;
+  display: absolute;
+  font-size: 0.9em;
+}
+.next-link {
+  float: right;
+  display: absolute;
+  font-size: 0.9em;
+}
+.prev-link a, .next-link a {
+  text-decoration: none !important;
 }
 
 hr {
@@ -88,13 +131,18 @@ hr {
   border-width: .05em;
   height: 1px;
   border-style: dashed;
-  margin-top: 0.5em;
-  margin-bottom: 1.5em;
+  margin-top: 0.8em;
+  margin-bottom: 0.8em;
 }
 .article-meta > hr {
   height: 1.2px;
   margin-top: 2em;
   margin-bottom: 1.2em;
+}
+.footnotes > hr {
+  height: 5px;
+  width: 95%;
+  background-color: #D0AF4C;
 }
 
 .pull-home {
@@ -463,9 +511,47 @@ input::-ms-input-placeholder {
   color: #bbb;
 }
 
-/* shortcodes */
+/* Sharing buttons */
+.sharing-buttons {
+  display: inline-block;
+  margin-bottom: -1.5em;
+}
+.sharing-buttons-area {
+  float: left;
+}
+.sharing-buttons .inline-svg {
+  float: left;
+  padding: 0.1em 1em 0.1em 1em;
+  margin-left: 1vw;
+  margin-right: 1vw;
+  border-radius: 8px;
+  background-color: #ddd;
+}
+.sharing-buttons .inline-svg:hover {
+  background-color: #fff;
+}
+.sharing-button-twitter .inline-svg:hover {
+  color: #1d9bf0 !important;
+}
+.sharing-button-facebook .inline-svg:hover {
+  color: #1778f2 !important;
+}
+.sharing-button-hatena .inline-svg:hover {
+  color: #00a4de !important;
+}
+.sharing-button-pocket .inline-svg:hover {
+  color: #ee4056 !important;
+}
+.sharing-button-soundcloud .inline-svg:hover {
+  color: #ff7521 !important;
+}
+.sharing-button-share .inline-svg:hover {
+  color: #337777 !important;
+}
+
+/* Shortcodes */
 .private {
-  background: #fee;
+  background: #2e2222;
   color: #f11;
   padding: 0.5em;
   border: solid 1px #f11;
@@ -479,5 +565,12 @@ input::-ms-input-placeholder {
 .steam-link {
   width: 450px;
   height: 200px;
-  /* margin: auto; */
+}
+
+.img-wrapper img {
+  transition-duration: 0.4s;
+}
+.img-wrapper img:hover {
+  transform: scale(1.05, 1.05);
+  transition-duration: 0.3s;
 }
