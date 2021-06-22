@@ -17,6 +17,14 @@
 </div>
 <hr>
 <div class="content-wrapper">
+  {{- if .Params.toc }}
+      {{- with .TableOfContents }}
+      <aside class="xToc">
+          <div class="xToc_title">–ÚŽŸ</div>
+          {{ . }}
+      </aside>
+      {{- end }}
+  {{- end }}
   <main>
     {{ with .Content }}{{ . }}{{ else }}This content is empty. {{ end }}
   </main>
