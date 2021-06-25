@@ -1,5 +1,5 @@
 {{- if or (.PrevInSection) (.NextInSection) -}}
-{{- if and (ne .Title "Contact") ( and ( and (ne .Title "Updates") (ne .Title "License")) (ne .Title "404 Page not found")) -}}
+{{- if ne .Params.pagelink false -}}
   <div class="page-links">
     {{- with .Parent.Pages.Prev . -}}
       <span class="arrow-left">{{ partial "fontawesome.html" "arrow-circle-left" }}</span>
