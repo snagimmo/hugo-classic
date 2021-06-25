@@ -2,6 +2,7 @@
 {{ partial "search.html" . }}
 <br>
 
+<div class="article">
 <div class="article-meta">
   <h2><span class="title">{{ .Title | markdownify }}</span></h2>
   {{ if .Params.date }}<span class="date">{{ partial "fontawesome.html" "clock" }}{{ .Date.Format "2006/01/02" }}</span>{{ end }}
@@ -28,6 +29,7 @@
   <main>
     {{ with .Content }}{{ . }}{{ else }}This content is empty. {{ end }}
   </main>
+</div>
 </div>
 <hr>
 {{ partial "pagelink.html" . }}
