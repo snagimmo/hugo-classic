@@ -1,10 +1,8 @@
 {{- $.Scratch.Add "index" slice -}}
-{{- $section := $.Site.GetPage "section" .Section }}
+{{- $section := $.Site.GetPage "section" .Section -}}
 {{- range .Site.RegularPages -}}
-    {{- if and (.IsDescendant $section) (and (not .Draft) (not .Params.private)) -}}
-    {{- if and (eq .Kind "page") (and (ne .Title "Contact") (ne .Title "Updates")) -}}
+    {{- if and (.IsDescendant $section) (not .Params.private) -}}
         {{- $.Scratch.Add "index" (dict "title" .Title "tags" .Params.tags "categories" .Params.categories "contents" .Plain "href" .URL ) -}}
-    {{- end -}}
     {{- end -}}
 {{- end -}}
 {{- $.Scratch.Get "index" | jsonify -}}

@@ -14,9 +14,9 @@
     {{ if .IsHome }}{{ $pages = .Site.RegularPages }}{{ end }}
     {{ range (where $pages "Section" "!=" "") }}
     {{ $datetime := .Date.Format "2006/01/02" }}
-    <li>
+    <li class="recent-posts">
       {{ if ne $datetime "0001/01/01" }}<span class="postdate">{{ $datetime }}</span>{{ end }}
-      <span class="recent-posts"><a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></span>
+      <span class="respective-posts"><a href="{{ .RelPermalink }}">{{ .Title | markdownify }}</a></span>
     </li>
     {{ else }}
     <p>None.</p>

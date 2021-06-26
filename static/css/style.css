@@ -14,7 +14,8 @@ main {
   line-height: 1.7em;
   hyphens: auto;
   display: block;
-  font-size: 1.1em;
+  /* font-size: 2.05vh; */
+  /* font-size: 1.8vh; */
 }
 main p {
   margin-top: 2em;
@@ -24,19 +25,50 @@ main p#mail-caption, .contacts p {
   margin-top: 0.5em;
   margin-bottom: 0.5em;
 }
+main h1 {
+  border-left: .35em solid #D0AF4C;
+  border-bottom: 1px dashed #D0AF4C;
+  padding-bottom: .6em;
+  padding-top: .3em;
+}
+main h2 {
+  border-left: .3em solid #D0AF4C;
+  border-bottom: 1px dashed #D0AF4C;
+  padding-bottom: .5em;
+  padding-top: .2em;
+}
+main h3 {
+  display: inline-block;
+  border-left: .2em solid #D0AF4C;
+  border-bottom: 1px dashed #D0AF4C;
+  padding-bottom: .3em;
+  padding-top: .1em;
+  margin-bottom: 0em;
+}
+main h4 {
+  border-left: .2em solid #D0AF4C;
+  padding-bottom: .2em;
+  padding-top: .1em;
+}
 main h1, main h2, main h3, main h4 {
   margin-top: 3.5em;
+  padding-left: .5em;
 }
 main .updates h1, main .updates h2, main h3, main h4 {
-  margin-top: 2em;
+  margin-top: 1.5em;
 }
 main .updates {
-  margin-bottom: 3em;
+  margin-top: 1em;
+  margin-bottom: 1em;
 }
 
+.article {
+  font-size: 2.05vh !important;
+}
 .content-wrapper {
   padding: 0.5em 12px 0.5em 12px;
-  font-size: 0.9em;
+  font-size: 2.05vh;
+  /* font-size: 1.15em; */
 }
 .content-wrapper a {
   text-decoration: none;
@@ -54,7 +86,15 @@ main .updates {
 }
 .article-meta a { font-size: 1.14em; }
 
-/* .home-title { text-align: center; } */
+.home-title {
+  text-align: center;
+  font-size: 1.8em;
+  line-height: 1.1em;
+}
+.home-description {
+  font-size: 0.9em;
+  line-height: 1.3em;
+}
 .menu { text-align: center; }
 .title {
   font-size: 1.5rem;
@@ -69,6 +109,9 @@ main .updates {
   margin-left: 0.5rem;
   margin-bottom: 0.5rem;
 }
+.terms-list {
+  line-height: 1.5em;
+}
 .postdate { font-size: 0.9em; }
 .notfound {
   font-size: 2em;
@@ -80,6 +123,7 @@ main .updates {
   text-align: center;
   margin-top: 1em;
   padding-bottom: 0.8em;
+  font-size: 1em;
 }
 .footnote-ref {
   margin: 0.1em;
@@ -95,14 +139,11 @@ main .updates {
   margin-top: 0.3em;
   margin-bottom: 0.3em;
 }
-.contacts {
-  /* width: 0.1em; */
-  /* max-width: 20%; */
-}
 .page-links {
   margin-top: 1.5rem;
   margin-bottom: 2.5rem;
   text-decoration: none !important;
+  font-size: 2.05vh;
 }
 .arrow-left {
   float: left;
@@ -116,11 +157,23 @@ main .updates {
   float: left;
   display: absolute;
   font-size: 0.9em;
+  overflow: hidden;
+  max-width: 40%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis; /* Safari */
+  -o-text-overflow: ellipsis; /* Opera */
 }
 .next-link {
   float: right;
   display: absolute;
   font-size: 0.9em;
+  overflow: hidden;
+  max-width: 40%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  -webkit-text-overflow: ellipsis; /* Safari */
+  -o-text-overflow: ellipsis; /* Opera */
 }
 .prev-link a, .next-link a {
   text-decoration: none !important;
@@ -170,8 +223,13 @@ a:hover {
   color: #FFD700;
   text-decoration: none;
 }
-.recent-posts a {
+.recent-posts {
   text-decoration: none;
+  line-height: 1.4em;
+}
+.respective-posts a {
+  text-decoration: none;
+  margin-left: 0.3em;
 }
 
 /* Header and Footer */
@@ -179,7 +237,7 @@ header {
   position: relative;
   width: 100%;
   height: 1.75rem;
-  font-size: 0.92rem;
+  font-size: 1.8vh;
   background: #D0AF4C;
 }
 header ul,
@@ -228,7 +286,7 @@ footer {
   width: 100%;
   height: 1.77rem;
   margin-top: 2rem;
-  font-size: 0.92rem;
+  font-size: 1.8vh;
   background: #D0AF4C;
 }
 footer ul,
@@ -278,21 +336,26 @@ pre {
   overflow-x: auto;
   white-space: pre;
   text-overflow: clip;
-  max-height: 700px;
   margin-bottom: 1em;
-  padding: 0em 1em 1em 1.2em;
+  padding: 1em 1em 1em 1.2em;
+}
+
+pre, code {
+  font-size: 1.8vh !important;
+  line-height: 1.45em;
 }
 
 /* Show line number */
 .code-line {
   counter-increment: linenumber;
-  font-size: 0.95em;
+  font-size: 1em;
   line-height: 1.5em;
 }
 .code-line:before {
   content: counter(linenumber, decimal-leading-zero);
   display: inline-block;
   border-right: 1px solid #D0AF4C;
+  background: #282C34;
   color: #999;
   font-size: 0.9em;
   width: 0.5em;
@@ -303,16 +366,20 @@ pre {
 }
 
 /* Show filetype or filename */
+.highlight > div > pre > .code-name {
+  border-radius: .2em 0 .3em 0;
+  padding: .02em .5em .04em .5em;
+  margin: -2.25em 0 0 -2.05em; /* This is quite important ! */
+}
 .code-name {
   display: inline-block;
   background: #D0AF4C;
   color: #0F0F1F;
-  border-radius: .3em 0 .3em 0;
-  padding: 0 .6em 0 .6em;
-  margin-left: -1.3em;
-  margin-bottom: 0.7em;
+  margin-bottom: 1em;
+  margin-right: 4em;
+  position: absolute;
   font-weight: bold;
-  font-size: 0.92rem;
+  font-size: 1.8vh !important;
 }
 
 /* Custom scrollbar */
@@ -351,6 +418,7 @@ pre::-webkit-scrollbar-thumb {
 :not(pre) > code {
   background: #282C34;
   border-bottom: 1px solid #D0AF4C;
+  font-size: 1.8vh !important;
   font-weight: 500;
   padding: 0 0.4rem 0.1rem 0.4rem;
 }
@@ -362,7 +430,7 @@ blockquote {
   border-radius: .3em;
   padding: 3px 2em 5px;
   line-height: 1.5em;
-  font-size: 0.85em;
+  font-size: 1.8vh !important;
 }
 
 /* Tables */
@@ -374,7 +442,7 @@ blockquote {
   line-height: 1.7em;
   width: 70%;
   margin: auto;
-  font-size: 1.1em;
+  font-size: 2vh !important;
 }
 .xToc_title {
   font-size: 1.2em;
@@ -387,18 +455,21 @@ blockquote {
 .xToc li {
   padding-top: 0 !important;
 }
+.xToc li:hover {
+  border-left: .3em solid #D0AF4C;
+  margin-left: -.3em;
+}
 .xToc li > ul {
   padding-left: 1em;
   width: 100%;
 }
-.xToc li {
-  border: 5px #D0AF4C !important;
-}
 .xToc a {
   color: #c0c0c0 !important;
+  font-size: 0.9em;
   font-weight: normal;
   display: block;
   border-bottom: dashed 1px #999;
+  margin-left: .5em;
 }
 .xToc a:hover {
   color: #FFD700 !important;
@@ -466,6 +537,10 @@ img, iframe, video {
   display: inline-block;
 }
 
+.MathJax {
+  max-width: 100%;
+}
+
 /* Search bar */
 .search-area{
   max-width: 60%;
@@ -521,7 +596,8 @@ img, iframe, video {
   border-radius: 3px;
   background: #0F0F1F;
   color: #ddd;
-  font-size: 0.75em;
+  font-size: 0.8em;
+  line-height: 1.15em;
   outline: 0; /* don't display outline*/
   position: relative;
   z-index: 1;
@@ -599,6 +675,7 @@ input::-ms-input-placeholder {
 .steam-link {
   width: 450px;
   height: 200px;
+  max-width: 100%;
 }
 
 .img-wrapper img {

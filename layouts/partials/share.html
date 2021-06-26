@@ -1,0 +1,12 @@
+{{ if ne .Params.share false}}
+<div class="sharing-buttons">
+  <p class="sharing-buttons-area">
+  <span class="sharing-button-twitter"><a rel="nofollow" href="https://twitter.com/intent/tweet/?text={{ .Title }}%20%7c%20{{ .Site.Title }}&url={{ .Permalink }}" target="_blank" title="Twitter">{{ partial "fontawesome.html" "twitter" }}</a></span>
+  <span class="sharing-button-hatena"><a rel="nofollow" href="https://b.hatena.ne.jp/add?mode=confirm&url={{ .Permalink }}&title={{ .Title }}%20%7c%20{{ .Site.Title }}" target="_blank" title="はてなブックマーク">{{ partial "fontawesome.html" "hatena" }}</a></span>
+  <span class="sharing-button-facebook"><a rel="nofollow" href="https://www.facebook.com/share.php?u={{ .Permalink }}&t={{ .Title }}%20%7c%20{{ .Site.Title }}" target="_blank" title="Facebook">{{ partial "fontawesome.html" "facebook" }}</a></span>
+  <span class="sharing-button-pocket"><a rel="nofollow" href="https://getpocket.com/edit?url={{ .Permalink }}&title={{ .Title }}%20%7c%20{{ .Site.Title }}" target="_blank" title="Pocket">{{ partial "fontawesome.html" "pocket" }}</a></span>
+  <span class="sharing-button-share"><a href=JavaScript:copyUrl() title="URLをコピー">{{ partial "fontawesome.html" "share-alt" }}</a></span>
+  </p>
+</div>
+{{ end }}
+

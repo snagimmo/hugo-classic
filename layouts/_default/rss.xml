@@ -16,7 +16,7 @@
             <link>{{ .Permalink }}</link>
             <pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>{{ with .Site.Author.email }}<author>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</author>{{end}}
             <guid>{{ .Permalink }}</guid>
-            <description>{{ if .Description }}{{ .Description }}{{ else }}{{ $.Site.Params.Description }}{{ end }}</description>
+            <description>{{ if .Description }}{{ .Description }}{{ else }}{{ substr .Summary 0 500 | safeHTML }}{{ if gt (len .Summary) 500 }}...{{ end }}{{ end }}</description>
         </item>{{ end }}{{ end }}
     </channel>
 </rss>
